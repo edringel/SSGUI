@@ -44,23 +44,23 @@ Where this gets really cool:
   
 Structure of rsrc.txt
 
-    First line: Screen size (Y, X) mostly for future use
+   First line: Screen size (Y, X) mostly for future use
   
-    Second line: number of screen objects
+   Second line: number of screen objects
   
-    Subsequent lines: data for each screen object. Comma separated, numbers are tolerant of spaces. Text should be EXACTLY what you want to see on the screen, starting immediately after the preceding comma. ,"Hello" will show up as "Hello".  , Hello will show up as Hello with a preceding space. ,Hello will show up as Hello.  Here are the structures:
+   Subsequent lines: data for each screen object. Comma separated, numbers are tolerant of spaces. Text should be EXACTLY what you want to see on the screen, starting immediately after the preceding comma. ,"Hello" will show up as "Hello".  , Hello will show up as Hello with a preceding space. ,Hello will show up as Hello.  Here are the structures:
   
-    First position: Unique ID
+   First position: Unique ID
    Second position: "Owner" screen
-    Third position: object type. so far, I've defined three: 1 = rectangle, 2 = circle, 3 = text
-    Fourth position: Is a control.  0 = no, 1 = yes.
-    Fifth, sixth, and seventh position: Forecolor, back color, and fill color. Fore color would be the color generally used the draw the outline of the object. Back color is used particularly for text, but is mandatory for all object types. Might be used in the future. Fill color is for filling objects, such as a rectangle or circle. If back color != fill color, the object will be filled with the fill color.
+   Third position: object type. so far, I've defined three: 1 = rectangle, 2 = circle, 3 = text
+   Fourth position: Is a control.  0 = no, 1 = yes.
+   Fifth, sixth, and seventh position: Forecolor, back color, and fill color. Fore color would be the color generally used the draw the outline of the object. Back color is used particularly for text, but is mandatory for all object types. Might be used in the future. Fill color is for filling objects, such as a rectangle or circle. If back color != fill color, the object will be filled with the fill color.
   
   Positions 8 and beyond are specific to the object.
   
      Rectangle: top left X, top left Y, width, height
-      Circle: center X, center Y, radius
-      Text: top left X, top left Y, text size (as in tft.setTextSize()), text string
+     Circle: center X, center Y, radius
+     Text: top left X, top left Y, text size (as in tft.setTextSize()), text string
     
     
     More to come, I hope.
