@@ -36,9 +36,9 @@ So, to use this library as is:
   
 Where this gets really cool:
 
-    Want to add a new graphic element? Easy. Just alter your rsrc.txt file. NO NEW CODE!!! Obviously, if you add an element with control potential you will need to update your swtich statement, but that's it.
+   Want to add a new graphic element? Easy. Just alter your rsrc.txt file. NO NEW CODE!!! Obviously, if you add an element with control potential you will need to update your swtich statement, but that's it.
   
-    Don't like the position of one of your graphic elements? Easy. Change the parameters in the rsrc.txt file.
+   Don't like the position of one of your graphic elements? Easy. Change the parameters in the rsrc.txt file.
   
    Want to make a new kind of screen object? Medium easy. Subclass ScreenObj, write a constructor for the new subclass, and update DrawObj to include instructions for the new object. This is not as bad as it sounds. Because an actual screen object is a subclass of ScreenObj, common information is already parsed. In all likelihood, you will only need to extract a few parameters. I've written a helper function that makes it pretty easy. I'll add more documentation later, but I think if you look through the SSG.begin() method you'll see that the method reads a line of text from the file and removes the text that has been read/used as each ScreenObj parameter is extracted. By the time your specialized constructor needs to be called, the text string contains only what you need to complete construction (see the various constructors). Each specialized constructor is also responsible for "backfilling" the ScreenObj information about the boundary rectangle used to determine if the object has been touched. Updating the DrawObj routine will generally consist of providing a wrapper around a preexisitng graphics library call, unless you are doing something really snazzy.
   
@@ -58,9 +58,9 @@ Structure of rsrc.txt
   
   Positions 8 and beyond are specific to the object.
   
-     Rectangle: top left X, top left Y, width, height
-     Circle: center X, center Y, radius
-     Text: top left X, top left Y, text size (as in tft.setTextSize()), text string
+   Rectangle: top left X, top left Y, width, height
+   Circle: center X, center Y, radius
+   Text: top left X, top left Y, text size (as in tft.setTextSize()), text string
     
     
-    More to come, I hope.
+  More to come, I hope.
